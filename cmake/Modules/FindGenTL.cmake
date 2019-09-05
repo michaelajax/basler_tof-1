@@ -7,13 +7,13 @@
 # GENTL_LIBRARIES   - GenTL libraries.
 # if GENTL_FOUND then GENTL_INCLUDE_DIR is appended to GENTL_INCLUDE_DIRS.
 
-find_library (GENTL_LIBRARY GenApi_gcc_v3_0_Basler_pylon_v5_0 PATHS /opt/BaslerToF/lib /opt/BaslerToF/lib64)
-find_library (GENTL_GCBASE_LIBRARY GCBase_gcc_v3_0_Basler_pylon_v5_0 PATHS /opt/BaslerToF/lib /opt/BaslerToF/lib64)
+find_library (GENTL_LIBRARY GenApi_MD_VC120_v3_0_Basler_pylon_v5_0 PATHS "C:/Program Files (x86)/Basler/ToF/lib/x64")
+find_library (GENTL_GCBASE_LIBRARY GCBase_MD_VC120_v3_0_Basler_pylon_v5_0 PATHS "C:/Program Files (x86)/Basler/ToF/lib/x64")
 #find_library (GENTL_GX_LIBRARY gxapi PATHS /opt/BaslerToF/lib /opt/BaslerToF/lib64)
 #find_library (GENTL_PYLON_BASE_LIBRARY pylonbase PATHS /opt/BaslerToF/lib /opt/BaslerToF/lib64)
 #find_library (GENTL_PYLON_UTILITY_LIBRARY pylonutility PATHS /opt/BaslerToF/lib /opt/BaslerToF/lib64)
 find_library (DL_LIBRARY dl)
-find_path (GENTL_INCLUDE_DIR GenICam.h PATHS /opt/BaslerToF/include)
+find_path (GENTL_INCLUDE_DIR GenICam.h PATHS "C:/Program Files (x86)/Basler/ToF/include")
 
 include(FindPackageHandleStandardArgs)
 find_package_handle_standard_args(GenTL DEFAULT_MSG GENTL_LIBRARY GENTL_INCLUDE_DIR)

@@ -6,7 +6,7 @@
   <arg name="pi/2"       value="1.5707963267948966" />
   <arg name="publish_tf" default="true" />
 
-  <arg name="basler_tof_path" default="/opt/BaslerToF" />
+  <arg name="basler_tof_path" default="C:/Program Files/Basler/ToF/bin/x64" />
 
   <!-- device_id can have the following formats:
         "21781335" : Use device with given serial number
@@ -23,8 +23,8 @@
 
     <node pkg="basler_tof" type="basler_tof_node" name="$(arg camera)_node" output="screen">
       <!-- This is necessary to find ProducerTOF.cti: -->
-      <env name="LD_LIBRARY_PATH" value="$(arg basler_tof_path)/bin:$(arg basler_tof_path)/bin/GigE:$(arg basler_tof_path)/lib64:$(arg basler_tof_path)/lib64/gentlproducer/gtl:$(env LD_LIBRARY_PATH)" />
-      <env name="GENICAM_GENTL64_PATH" value="$(arg basler_tof_path)/lib64/gentlproducer/gtl" />
+      <env name="LD_LIBRARY_PATH" value="$(arg basler_tof_path):$(env LD_LIBRARY_PATH)" />
+      <env name="GENICAM_GENTL64_PATH" value="$(arg basler_tof_path)" />
       <param name="frame_id"  value="$(arg frame_id)"  />
       <param name="device_id" type="str" value="$(arg device_id)" />
       <param name="camera_info_url" value="$(arg camera_info_url)" />

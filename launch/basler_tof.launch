@@ -5,7 +5,7 @@
   <arg name="frame_id"   default="$(arg camera)_optical_frame" />
   <arg name="publish_tf" default="true" />
 
-  <arg name="basler_tof_path" default="/opt/BaslerToF" />
+  <arg name="basler_tof_path" default="C:/Program Files/Basler/ToF/bin/x64" />
 
   <!-- device_id can have the following formats:
         "21781335" : Use device with given serial number
