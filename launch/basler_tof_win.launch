@@ -5,7 +5,7 @@
   <arg name="frame_id"   default="$(arg camera)_optical_frame" />
   <arg name="publish_tf" default="true" />
 
-  <arg name="basler_tof_path" default="/opt/BaslerToF" />
+  <arg name="basler_tof_path" default="C:/Program Files/Basler/ToF/bin/x64" />
 
   <!-- device_id can have the following formats:
         "21781335" : Use device with given serial number
@@ -19,7 +19,7 @@
   <arg name="points_xyz"    default="true" />
   <arg name="rectify_depth" default="true" />
 
-  <include file="$(find basler_tof)/launch/includes/device.launch.xml">
+  <include file="$(find basler_tof)/launch/includes/device.launch.win.xml">
     <arg name="camera"          default="$(arg camera)" />
     <arg name="device_id"       default="$(arg device_id)" />
     <arg name="frame_id"        default="$(arg frame_id)" />
