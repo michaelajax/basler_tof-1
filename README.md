@@ -27,13 +27,14 @@ Linux Installation
 
 Windows Installation
 --------------------
+
 * Install the Basler ToF Windows driver from [baslerweb.com](https://www.baslerweb.com/en/sales-support/downloads/software-downloads/tof-software-windows/)
 * Create a folder to be your catkin workspace
 * Create a `src` subdirectory, and clone this repository to `basler_tof` under that `src` directory
 * Invoke `catkin_make` from your catkin workspace, and then source the new package into ROS
-   ```shell
-   c:\opt\catkin_ws_basler>catkin_make
-   c:\opt\catkin_ws_basler>.\devel\setup.bat
+   ```batch
+   c:\ws>catkin_make
+   c:\ws>.\devel\setup.bat
    ```
 
 Running
@@ -44,7 +45,7 @@ roslaunch basler_tof basler_tof.launch
 ```
 
 Windows:
-```bash
+```batch
 roslaunch basler_tof basler_tof_win.launch
 ```
 
